@@ -23,3 +23,7 @@ During download, files are decrypted securely and sent to the user.
 2. Run the app.
 3. Open browser:
    http://127.0.0.1:5000
+
+## Walkthrough Video
+A walkthrough video is included in this repository.
+   
