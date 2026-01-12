@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure File Upload</title>
+</head>
+<body>
+
+    <h1>🔐 Secure File Upload</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {{ form.file() }}
+        {{ form.submit() }}
+    </form>
+
+    {% if filename %}
+        <hr>
+        <h3>Upload successful!</h3>
+
+        <a href="{{ url_for('download') }}?filename={{ filename }}">
+            <button>📥 Download Encrypted File</button>
+        </a>
+    {% endif %}
+
+</body>
+</html>
